@@ -55,7 +55,7 @@ body {
     }
 
     .contact {
-        margin: 15px 0;
+        margin: 15px 0 0;
         line-height: 20px;
 
         dt {
@@ -101,6 +101,11 @@ body {
         p {
             margin: 10px 0;
             text-align: justify;
+        }
+
+        .tech {
+            float: right;
+            font-size: 10px;
         }
 
         .role {

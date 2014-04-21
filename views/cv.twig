@@ -57,7 +57,10 @@
                                 {% endif %}
                             </h4>
                             {% if workplace.job is defined %}
-                                <p class="role">{{ workplace.job }}</p>
+                                <p class="role">
+                                    {{ workplace.job }}
+                                    <span class="tech">{{ workplace.tech|join(', ') }}</span>
+                                </p>
                             {% endif %}
                             <p>{{ workplace.description }}</p>
                         </div>

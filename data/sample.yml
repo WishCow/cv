@@ -14,12 +14,13 @@ about: I'm a random developer, looking for a job
 areas:
   - name: Backend
     years: 7
-    description: I've done a lot of work on the backend
+    description: I've done a lot of work on the backend. Words between |pipes| will be highlighted.
 
 work:
   - name: Company Ltd.
     year: 1970 - 2014
     job: Lots of duties
+    tech: [ php, js, css ]
     description: I founded the company
 
 hobbies: Swimming
