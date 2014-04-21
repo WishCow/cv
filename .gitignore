@@ -1,0 +1,6 @@
+vendor
+data
+node_modules
+htdocs/css
+htdocs/img
+.sass-cache

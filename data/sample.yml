@@ -1,0 +1,25 @@
+name: Your name
+title: Job title
+#pic: img/me.jpg
+contact:
+  - title: Phone
+    caption: +3612 345 6789
+  - title: Mail
+    caption: name@domain.tld
+  - title: Blog
+    link: http://domain.tld
+
+about: I'm a random developer, looking for a job
+
+areas:
+  - name: Backend
+    years: 7
+    description: I've done a lot of work on the backend
+
+work:
+  - name: Company Ltd.
+    year: 1970 - 2014
+    job: Lots of duties
+    description: I founded the company
+
+hobbies: Swimming

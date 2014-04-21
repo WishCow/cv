@@ -1,0 +1,116 @@
+@import "compass/css3/box-shadow";
+$padding: 20px;
+$bottom: 20px;
+$orange: #E36D0B;
+$gray: #4C4040;
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #2B2979;
+}
+
+
+body {
+    background: #C4C9CF;
+    font-family: 'Droid sans', sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+
+    strong {
+        font-weight: bold;
+    }
+}
+
+.page {
+    width: 21cm;
+    margin: 25px auto;
+    background: #fff;
+    border-top: 20px solid #E26C0A;
+    padding-bottom: 20px;
+    @include box-shadow(0 0 10px 5px #888);
+}
+
+.namecard {
+    background: #F1F1F1;
+    padding: $padding;
+    margin-bottom: $bottom;
+
+    .picture {
+        float: right;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 16px;
+        color: $gray;
+    }
+
+    dt:after {
+        display: inline;
+        content: ':';
+    }
+
+    .contact {
+        margin: 15px 0;
+        line-height: 20px;
+
+        dt {
+            width: 110px;
+            float: left;
+            font-weight: bold;
+        }
+    }
+}
+
+.about-me {
+    padding: 0 $padding;
+    margin-bottom: $bottom;
+}
+
+.body {
+    padding: 0 $padding;
+
+    h3 {
+        font-size: 20px;
+        float: left;
+        line-height: 22px;
+        width: 120px;
+    }
+
+    .area, .workplace, .hobby {
+        margin-left: 150px;
+        border-bottom: 1px solid #C3C3C3;
+        margin-bottom: $bottom;
+
+        h4 {
+            font-size: 20px;
+            color: $orange;
+
+            span {
+                background: $orange;
+                color: #FFF;
+                padding: 0px 10px;
+                font-size: 14px;
+                float: right;
+            }
+        }
+        p {
+            margin: 10px 0;
+            text-align: justify;
+        }
+
+        .role {
+            font-size: 14px;
+            color: $gray;
+        }
+    }
+
+    .hobby {
+        border-bottom: 0;
+    }
+
+}

@@ -1,0 +1,33 @@
+@import "compass/css3/box-shadow";
+
+a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.page {
+    border: 0;
+    @include box-shadow(none);
+}
+
+section {
+    border: 0;
+}
+
+img {
+    display: none;
+}
+
+.body {
+    .area, .workplace, .hobby {
+        page-break-inside: avoid;
+
+        h4 {
+            color: inherit;
+            span {
+                padding: 0;
+            }
+        }
+
+    }
+}

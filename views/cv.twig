@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ name }} - Curriculum Vitae</title>
+        <link href="/css/reset.css" type="text/css" rel="stylesheet"/>
+        <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+        <link href="/css/style.css" type="text/css" rel="stylesheet"/>
+        <link href="/css/print.css" type="text/css" media="print" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="page">
+            <section class="namecard">
+                {% if pic is defined %}
+                    <div class="picture">
+                        <img alt="{{ name }}" src="/{{ pic }}"/>
+                    </div>
+                {% endif %}
+                <h1>{{ name }}</h1>
+                <h2>{{ title }}</h2>
+                <dl class="contact">
+                    {% for info in contact %}
+                        <dt>{{ info.title }}</dt>
+                        {% set caption = info.caption is defined ? info.caption : info.link %}
+                        <dd>
+                            {% if info.link is defined %}
+                                <a href="{{ info.link }}">{{ caption }}</a>
+                            {% else %}
+                                {{ caption }}
+                            {% endif %}
+                        </dd>
+                    {% endfor %}
+                </dl>
+            </section>
+            <section class="about-me">{{ about }}</section>
+            <section class="body">
+                <section class="expertise">
+                    <h3>Areas of expertise</h3>
+                    {% for area in areas %}
+                        <div class="area">
+                            <h4>{{ area.name }}
+                                {% if area.years is defined %}
+                                    <span class="year">{{ area.years }} years</span>
+                                {% endif %}
+                            </h4>
+                            <p>{{ area.description|keywords }}</p>
+                        </div>
+                    {% endfor %}
+                </section>
+                <section class="work">
+                    <h3>Notable workplaces</h3>
+                    {% for workplace in work %}
+                        <div class="workplace">
+                            <h4>{{ workplace.name }}
+                                {% if workplace.year is defined %}
+                                    <span class="year">{{ workplace.year }}</span>
+                                {% endif %}
+                            </h4>
+                            {% if workplace.job is defined %}
+                                <p class="role">{{ workplace.job }}</p>
+                            {% endif %}
+                            <p>{{ workplace.description }}</p>
+                        </div>
+                    {% endfor %}
+                </section>
+                <section class="hobbies">
+                    <h3>Hobbies</h3>
+                    <p class="hobby">{{ hobbies }}</p>
+                </section>
+            </section>
+        </div>
+        {% if app.debug %}
+            <script src="//localhost:35729/livereload.js"></script>
+        {% endif %}
+    </body>
+</html>
