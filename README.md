@@ -3,7 +3,7 @@ This is the engine behind my cv site.
 Installation steps:
 * Run composer install to get the PHP depedencies
 * Run npm install to get the grunt modules
-* Copy data/sample.yml to data/cv.yml, and fill out the details
+* Copy src/data/sample.yml to src/data/cv.yml, and fill out the details
 * (Optional) pass the DEBUG environment variable to the application, to enable debug mode
 
 If the application is in debug mode, it will include the necessary javascript file for automatic browser refreshing with Grunt, and it will provide nice error messages if something goes wrong.

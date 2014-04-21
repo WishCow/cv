@@ -1,18 +1,21 @@
 module.exports = function(grunt) {
 
+    var sassDir = 'src/Resources/sass/';
+    var cssDir = 'htdocs/css/';
+
     grunt.initConfig({
         compass: {
             dist: {
                 options: {
-                    sassDir: 'sass',
-                    cssDir: 'htdocs/css',
+                    sassDir: sassDir,
+                    cssDir: cssDir,
                     environment: 'production'
                 }
             }
         },
         watch: {
             styles: {
-                files: [ 'sass/*.scss' ],
+                files: [ sassDir + '*.scss' ],
                 tasks: [ 'compass' ]
             },
             gruntfile: {
@@ -22,7 +25,7 @@ module.exports = function(grunt) {
                 }
             },
             css: {
-                files: [ 'htdocs/css/*.css' ],
+                files: [ cssDir + '*.css' ],
                 options: {
                     livereload: true
                 }
