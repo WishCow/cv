@@ -4,3 +4,5 @@ node_modules
 htdocs/css
 htdocs/img
 .sass-cache
+cache
+src/Resources/config/config.php
