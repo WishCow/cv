@@ -3,6 +3,7 @@ $padding: 20px;
 $bottom: 20px;
 $orange: #E36D0B;
 $gray: #4C4040;
+$left-margin: 150px;
 
 a:link, a:visited {
     text-decoration: none;
@@ -57,11 +58,22 @@ body {
     .contact {
         margin: 15px 0 0;
         line-height: 20px;
+        position: relative;
 
         dt {
-            width: 110px;
+            width: $left-margin;
             float: left;
             font-weight: bold;
+        }
+
+        .pdf {
+            display: block;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: url('/img/pdf.png');
         }
     }
 }
@@ -69,6 +81,7 @@ body {
 .about-me {
     padding: 0 $padding;
     margin-bottom: $bottom;
+    text-align: justify;
 }
 
 .body {
@@ -82,7 +95,7 @@ body {
     }
 
     .area, .workplace, .hobby {
-        margin-left: 150px;
+        margin-left: $left-margin;
         border-bottom: 1px solid #C3C3C3;
         margin-bottom: $bottom;
 
@@ -116,6 +129,7 @@ body {
 
     .hobby {
         border-bottom: 0;
+        text-align: justify;
     }
 
 }

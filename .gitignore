@@ -3,6 +3,7 @@ src/Resources/data
 node_modules
 htdocs/css
 htdocs/img
+htdocs/norbert_keri.pdf
 .sass-cache
 cache
 src/Resources/config/config.php
